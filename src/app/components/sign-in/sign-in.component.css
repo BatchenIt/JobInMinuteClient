@@ -1,0 +1,17 @@
+.container {
+  position: relative;
+  top: 20%;
+  height: 100%;
+  width: 30%;
+  margin: 0 auto;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.space {
+  margin-bottom: 5%;
+  text-align: center;
+}

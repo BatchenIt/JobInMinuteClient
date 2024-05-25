@@ -1,0 +1,14 @@
+.logo {
+    background: url('../../../assets/Logo.PNG') no-repeat;
+    width: 261px;
+    height: 43px;
+}
+
+.spacer {
+    margin-left: 30px;
+}
+
+.tab {
+    font-size: 85%;
+    cursor: pointer;
+}

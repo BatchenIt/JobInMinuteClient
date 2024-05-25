@@ -1,0 +1,12 @@
+<div class="container">
+
+    <div class="space">
+        <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
+            <mat-button-toggle value="employer" (click)="isEmployer=true" >אני מעסיק</mat-button-toggle>
+            <mat-button-toggle value="candidate" (click)="isEmployer=false">אני מחפש עבודה</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+
+    <app-form-wizard [isEmployer]="isEmployer"></app-form-wizard>
+
+</div>
