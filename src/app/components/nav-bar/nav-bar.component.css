@@ -1,7 +1,8 @@
 .logo {
     background: url('../../../assets/Logo.PNG') no-repeat;
-    width: 261px;
-    height: 43px;
+    width: 258px;
+    height: 40px;
+    cursor: pointer;
 }
 
 .spacer {

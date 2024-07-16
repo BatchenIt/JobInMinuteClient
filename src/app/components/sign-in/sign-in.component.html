@@ -1,12 +1,60 @@
-<div class="container">
-
-    <div class="space">
-        <mat-button-toggle-group name="favoriteColor" aria-label="Favorite Color">
-            <mat-button-toggle value="employer" (click)="isEmployer=true" >אני מעסיק</mat-button-toggle>
-            <mat-button-toggle value="candidate" (click)="isEmployer=false">אני מחפש עבודה</mat-button-toggle>
-        </mat-button-toggle-group>
-    </div>
-
-    <app-form-wizard [isEmployer]="isEmployer"></app-form-wizard>
-
-</div>
+<div class="registration-container">
+    <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
+      <h2>הרשמה-יצירת פרופיל</h2>
+  
+      <div class="form-group">
+        <label for="userType">אני</label>
+        <select id="userType" formControlName="userType">
+          <option value="candidate">מועמד</option>
+          <option value="employer">מעסיק</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="fullName">שם מלא</label>
+        <input id="fullName" type="text" formControlName="fullName">
+      </div>
+  
+      <div class="form-group">
+        <label for="email">מייל</label>
+        <input id="email" type="email" formControlName="email">
+      </div>
+  
+      <div class="form-group">
+        <label for="phoneNumber">מס' נייד</label>
+        <input id="phoneNumber" type="text" formControlName="phoneNumber">
+      </div>
+  
+      <div class="form-group">
+        <label for="password">סיסמה</label>
+        <input id="password" type="password" formControlName="password">
+      </div>
+  
+      <div *ngIf="!isEmployer" class="form-group">
+        <label for="address">כתובת</label>
+        <input id="address" type="text" formControlName="address">
+      </div>
+  
+      <div *ngIf="isEmployer" class="form-group">
+        <label for="businessNumber">מס ח"פ</label>
+        <input id="businessNumber" type="text" formControlName="businessNumber">
+      </div>
+  
+      <div *ngIf="isEmployer" class="form-group">
+        <label for="companyName">שם חברה</label>
+        <input id="companyName" type="text" formControlName="companyName">
+      </div>
+  
+      <div *ngIf="isEmployer" class="form-group">
+        <label for="companyType">תחום חברה</label>
+        <input id="companyType" type="text" formControlName="companyType">
+      </div>
+  
+      <div *ngIf="isEmployer" class="form-group">
+        <label for="description">תיאור</label>
+        <textarea id="description" formControlName="description"></textarea>
+      </div>
+  
+      <button type="submit" [disabled]="!registrationForm.valid">שלח</button>
+    </form>
+  </div>

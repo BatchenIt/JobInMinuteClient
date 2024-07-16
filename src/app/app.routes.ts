@@ -6,9 +6,9 @@ import { SignInComponent } from './components/sign-in/sign-in.component';
 import { AboutUsComponent } from './components/about-us/about-us/about-us.component';
 
 export const routes: Routes = [
-    // { path: '**', component: HomeComponent },
     { path: 'jobs', component: JobsComponent },
     { path: 'login', component: LoginComponent },
-    { path: 'signIn', component: SignInComponent },
-    { path: 'aboutUs', component: AboutUsComponent }
+    { path: 'signin', component: SignInComponent },
+    { path: 'aboutus', component: AboutUsComponent },
+    { path: '**', component: JobsComponent }
 ];

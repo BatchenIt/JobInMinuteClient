@@ -5,8 +5,9 @@ import { Router } from '@angular/router';
 
 enum NavigationType {
   login = 'login',
-  signIn = 'signIn',
-  aboutUs = 'aboutUs'
+  signIn = 'signin',
+  aboutUs = 'aboutus',
+  jobs = 'jobs'
 }
 
 @Component({

@@ -1,0 +1,31 @@
+.container {
+  position: relative;
+  top: 10%;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  height: 70vh;
+  overflow: auto;
+  gap: 3%;
+}
+
+.card {
+  max-width: 400px;
+}
